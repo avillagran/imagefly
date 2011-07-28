@@ -10,8 +10,8 @@ This is a Kohana 3 module for resizing and caching images directly in your HTML 
 Just like any Kohana module, enable and go!
 
 1. Add the imagefly folder to your Kohana 3 modules directory or
-	$ git submodule add git@github.com:avillagran/imagefly.git modules/imagefly
-	$ git submodule update --init
+  	$ git submodule add git@github.com:avillagran/imagefly.git modules/imagefly
+	  $ git submodule update --init
 2. Enable in your bootstrap.php
 3. Enable the Kohana 3 Image module (required for imagefly)
 
