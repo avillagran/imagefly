@@ -64,7 +64,16 @@ class ImageFly
         error_reporting(error_reporting() & ~E_STRICT);
         
         // Set the config
-        $this->config = Kohana::config('imagefly');
+        if (version_compare(Kohana::VERSION, '3.2', '<'))
+        {
+            // Kohaha 3.1.x config API
+            $this->config = Kohana::config('imagefly');
+        }
+        else
+        {
+            // Kohaha 3.2.x config API
+            $this->config = Kohana::$config->load('imagefly');
+        }
         
         // Try to create the cache directory if it does not exist
         $this->_createCacheDir();
